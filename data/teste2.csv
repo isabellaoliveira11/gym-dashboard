@@ -1,0 +1,510 @@
+ID Aluno,Nome,Idade,Gênero,Plano,Data de Matrícula,Mês da Matrícula,Meio de Pagamento,Status de Cancelamento,Data de Cancelamento,Mês do Cancelamento,Estação do Cancelamento,Motivo do Cancelamento,Tempo de Permanência (meses),Total de Pagamentos,2023-01,2023-02,2023-03,2023-04,2023-05,2023-06,2023-07,2023-08,2023-09,2023-10,2023-11,2023-12
+1,Aluno 1,19,Feminino,Anual,2023-01-08,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+2,Aluno 2,45,Feminino,Mensal,2023-01-14,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+3,Aluno 3,23,Feminino,Mensal,2023-01-20,1,Cartão,1,2023-06-22,6,Inverno,Outros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+4,Aluno 4,27,Feminino,Anual,2023-01-08,1,Cartão,1,2023-08-04,8,Inverno,Outros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+5,Aluno 5,30,Feminino,Mensal,2023-01-23,1,Pix,1,2023-06-06,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+6,Aluno 6,30,Feminino,Mensal,2023-01-04,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+7,Aluno 7,24,Feminino,Anual,2023-01-20,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+8,Aluno 8,20,Feminino,Anual,2023-01-18,1,Cartão,1,2023-06-16,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+9,Aluno 9,56,Feminino,Mensal,2023-01-10,1,Cartão,1,2023-07-05,7,Inverno,Outros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+10,Aluno 10,41,Masculino,Anual,2023-01-19,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+11,Aluno 11,22,Feminino,Mensal,2023-01-03,1,Dinheiro,1,2023-06-15,6,Inverno,Problemas Financeiros,5,4,0,1,1,1,0,1,0,0,0,0,0,0
+12,Aluno 12,52,Masculino,Anual,2023-01-09,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+13,Aluno 13,50,Feminino,Mensal,2023-01-12,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+14,Aluno 14,30,Feminino,Mensal,2023-01-21,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+15,Aluno 15,44,Feminino,Mensal,2023-01-13,1,Dinheiro,1,2023-07-17,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+16,Aluno 16,56,Feminino,Mensal,2023-01-11,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+17,Aluno 17,46,Masculino,Mensal,2023-01-26,1,Pix,0,,,,,11,9,0,1,0,0,1,1,1,1,1,1,1,1
+18,Aluno 18,30,Feminino,Mensal,2023-01-23,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+19,Aluno 19,42,Feminino,Anual,2023-01-21,1,Cartão,1,2023-03-16,3,Outono,Problemas Financeiros,2,2,0,1,1,0,0,0,0,0,0,0,0,0
+20,Aluno 20,29,Feminino,Mensal,2023-01-18,1,Pix,1,2023-07-09,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+21,Aluno 21,45,Feminino,Anual,2023-01-19,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+22,Aluno 22,28,Feminino,Mensal,2023-01-16,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+23,Aluno 23,21,Feminino,Mensal,2023-01-21,1,Pix,0,,,,,11,10,0,1,1,1,1,1,0,1,1,1,1,1
+24,Aluno 24,43,Feminino,Mensal,2023-01-13,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+25,Aluno 25,36,Feminino,Anual,2023-01-18,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+26,Aluno 26,18,Masculino,Mensal,2023-01-18,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+27,Aluno 27,46,Masculino,Anual,2023-01-04,1,Cartão,1,2023-12-11,12,Verão,Problemas Financeiros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+28,Aluno 28,26,Feminino,Mensal,2023-01-24,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+29,Aluno 29,37,Feminino,Mensal,2023-01-04,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+30,Aluno 30,31,Masculino,Mensal,2023-01-12,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+31,Aluno 31,38,Masculino,Mensal,2023-01-11,1,Cartão,1,2023-08-28,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+32,Aluno 32,25,Feminino,Anual,2023-01-27,1,Cartão,1,2023-07-25,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+33,Aluno 33,29,Masculino,Mensal,2023-01-03,1,Cartão,0,,,,,11,9,0,1,1,1,1,1,1,1,1,0,0,1
+34,Aluno 34,37,Feminino,Mensal,2023-01-25,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+35,Aluno 35,42,Feminino,Mensal,2023-01-17,1,Dinheiro,0,,,,,11,10,0,1,1,1,1,1,1,1,1,0,1,1
+36,Aluno 36,35,Masculino,Mensal,2023-01-25,1,Cartão,1,2023-12-24,12,Verão,Outros,11,10,0,1,1,0,1,1,1,1,1,1,1,1
+37,Aluno 37,27,Masculino,Anual,2023-01-13,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+38,Aluno 38,42,Masculino,Anual,2023-01-17,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+39,Aluno 39,29,Feminino,Mensal,2023-01-01,1,Dinheiro,1,2023-11-19,11,Primavera,Problemas Financeiros,10,11,1,1,1,1,1,1,1,1,1,1,1,0
+40,Aluno 40,28,Feminino,Mensal,2023-01-03,1,Pix,1,2023-09-10,9,Primavera,Problemas Financeiros,8,8,0,1,1,1,1,1,1,1,1,0,0,0
+41,Aluno 41,21,Masculino,Mensal,2023-01-28,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+42,Aluno 42,37,Feminino,Anual,2023-01-22,1,Cartão,1,2023-05-26,5,Outono,Problemas Financeiros,4,4,0,1,1,1,1,0,0,0,0,0,0,0
+43,Aluno 43,38,Feminino,Anual,2023-01-08,1,Cartão,1,2023-07-24,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+44,Aluno 44,48,Masculino,Mensal,2023-01-04,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+45,Aluno 45,32,Feminino,Anual,2023-01-15,1,Cartão,1,2023-06-04,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+46,Aluno 46,21,Masculino,Mensal,2023-01-13,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+47,Aluno 47,48,Masculino,Mensal,2023-01-07,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+48,Aluno 48,35,Feminino,Anual,2023-01-06,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+49,Aluno 49,29,Feminino,Mensal,2023-01-26,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+50,Aluno 50,39,Masculino,Mensal,2023-01-18,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+51,Aluno 51,59,Masculino,Mensal,2023-01-14,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+52,Aluno 52,28,Feminino,Anual,2023-01-02,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+53,Aluno 53,18,Feminino,Anual,2023-01-09,1,Cartão,1,2023-06-05,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+54,Aluno 54,47,Masculino,Anual,2023-01-14,1,Cartão,1,2023-06-02,6,Inverno,Outros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+55,Aluno 55,44,Feminino,Anual,2023-01-05,1,Cartão,1,2023-10-02,10,Primavera,Problemas Financeiros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+56,Aluno 56,28,Feminino,Mensal,2023-01-24,1,Cartão,1,2023-11-22,11,Primavera,Problemas Financeiros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+57,Aluno 57,45,Feminino,Mensal,2023-01-19,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+58,Aluno 58,55,Feminino,Mensal,2023-01-17,1,Pix,1,2023-10-08,10,Primavera,Problemas Financeiros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+59,Aluno 59,27,Feminino,Mensal,2023-01-28,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+60,Aluno 60,25,Feminino,Mensal,2023-01-20,1,Cartão,1,2023-04-09,4,Outono,Problemas Financeiros,3,3,0,1,1,1,0,0,0,0,0,0,0,0
+61,Aluno 61,23,Feminino,Anual,2023-01-09,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+62,Aluno 62,44,Feminino,Mensal,2023-01-13,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+63,Aluno 63,42,Feminino,Anual,2023-01-11,1,Cartão,1,2023-10-26,10,Primavera,Problemas Financeiros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+64,Aluno 64,56,Masculino,Mensal,2023-01-20,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+65,Aluno 65,60,Masculino,Mensal,2023-01-07,1,Cartão,1,2023-09-06,9,Primavera,Problemas Financeiros,8,8,0,1,1,1,1,1,1,1,1,0,0,0
+66,Aluno 66,25,Feminino,Anual,2023-01-03,1,Cartão,1,2023-03-04,3,Outono,Problemas Financeiros,2,2,0,1,1,0,0,0,0,0,0,0,0,0
+67,Aluno 67,33,Masculino,Mensal,2023-01-27,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+68,Aluno 68,31,Feminino,Mensal,2023-01-27,1,Cartão,0,,,,,11,9,0,0,0,1,1,1,1,1,1,1,1,1
+69,Aluno 69,56,Feminino,Mensal,2023-01-09,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+70,Aluno 70,24,Feminino,Mensal,2023-01-10,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+71,Aluno 71,44,Feminino,Mensal,2023-01-21,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+72,Aluno 72,37,Masculino,Anual,2023-01-28,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+73,Aluno 73,41,Feminino,Anual,2023-01-02,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+74,Aluno 74,46,Feminino,Anual,2023-01-06,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+75,Aluno 75,39,Masculino,Anual,2023-01-18,1,Cartão,1,2023-08-13,8,Inverno,Outros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+76,Aluno 76,22,Feminino,Mensal,2023-01-02,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+77,Aluno 77,40,Masculino,Mensal,2023-01-05,1,Dinheiro,1,2023-10-07,10,Primavera,Outros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+78,Aluno 78,33,Feminino,Mensal,2023-01-07,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+79,Aluno 79,42,Feminino,Anual,2023-01-25,1,Cartão,1,2023-11-28,11,Primavera,Problemas Financeiros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+80,Aluno 80,52,Feminino,Mensal,2023-01-28,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+81,Aluno 81,48,Feminino,Mensal,2023-01-01,1,Dinheiro,1,2023-10-28,10,Primavera,Outros,9,10,1,1,1,1,1,1,1,1,1,1,0,0
+82,Aluno 82,56,Feminino,Anual,2023-01-26,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+83,Aluno 83,45,Feminino,Mensal,2023-01-06,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+84,Aluno 84,24,Masculino,Mensal,2023-01-08,1,Dinheiro,1,2023-08-17,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+85,Aluno 85,55,Feminino,Anual,2023-01-10,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+86,Aluno 86,52,Masculino,Mensal,2023-01-22,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+87,Aluno 87,32,Feminino,Mensal,2023-01-12,1,Dinheiro,1,2023-11-08,11,Primavera,Problemas Financeiros,10,9,0,1,1,1,1,1,1,1,1,0,1,0
+88,Aluno 88,34,Feminino,Anual,2023-01-01,1,Cartão,0,,,,,11,12,1,1,1,1,1,1,1,1,1,1,1,1
+89,Aluno 89,59,Feminino,Mensal,2023-01-09,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+90,Aluno 90,40,Feminino,Anual,2023-01-24,1,Cartão,1,2023-08-17,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+91,Aluno 91,35,Masculino,Mensal,2023-01-19,1,Dinheiro,1,2023-11-27,11,Primavera,Outros,10,8,0,1,0,1,1,1,1,1,1,0,1,0
+92,Aluno 92,20,Feminino,Anual,2023-01-01,1,Cartão,0,,,,,11,12,1,1,1,1,1,1,1,1,1,1,1,1
+93,Aluno 93,48,Feminino,Mensal,2023-01-14,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+94,Aluno 94,42,Feminino,Anual,2023-01-20,1,Cartão,1,2023-10-04,10,Primavera,Outros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+95,Aluno 95,51,Feminino,Anual,2023-01-17,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+96,Aluno 96,34,Feminino,Anual,2023-01-23,1,Cartão,1,2023-09-21,9,Primavera,Problemas Financeiros,8,8,0,1,1,1,1,1,1,1,1,0,0,0
+97,Aluno 97,25,Feminino,Anual,2023-01-22,1,Cartão,1,2023-03-16,3,Outono,Problemas Financeiros,2,2,0,1,1,0,0,0,0,0,0,0,0,0
+98,Aluno 98,43,Masculino,Mensal,2023-01-19,1,Cartão,1,2023-06-10,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+99,Aluno 99,39,Feminino,Mensal,2023-01-10,1,Dinheiro,1,2023-08-02,8,Inverno,Outros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+100,Aluno 100,47,Feminino,Anual,2023-01-15,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+101,Aluno 101,43,Feminino,Anual,2023-01-26,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+102,Aluno 102,47,Masculino,Mensal,2023-01-03,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+103,Aluno 103,42,Feminino,Anual,2023-01-03,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+104,Aluno 104,45,Masculino,Anual,2023-01-08,1,Cartão,1,2023-06-25,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+105,Aluno 105,26,Masculino,Mensal,2023-01-16,1,Pix,1,2023-08-05,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+106,Aluno 106,46,Feminino,Anual,2023-01-14,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+107,Aluno 107,39,Masculino,Anual,2023-01-16,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+108,Aluno 108,26,Feminino,Mensal,2023-01-25,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+109,Aluno 109,27,Feminino,Anual,2023-01-02,1,Cartão,1,2023-10-08,10,Primavera,Problemas Financeiros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+110,Aluno 110,55,Feminino,Mensal,2023-01-05,1,Dinheiro,1,2023-06-16,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+111,Aluno 111,42,Masculino,Anual,2023-01-25,1,Cartão,1,2023-07-16,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+112,Aluno 112,41,Masculino,Anual,2023-01-27,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+113,Aluno 113,35,Masculino,Mensal,2023-01-28,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+114,Aluno 114,29,Feminino,Mensal,2023-01-09,1,Cartão,1,2023-12-27,12,Verão,Problemas Financeiros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+115,Aluno 115,38,Masculino,Mensal,2023-01-15,1,Dinheiro,1,2023-05-12,5,Outono,Problemas Financeiros,4,4,0,1,1,1,1,0,0,0,0,0,0,0
+116,Aluno 116,30,Feminino,Anual,2023-01-11,1,Cartão,1,2023-05-06,5,Outono,Problemas Financeiros,4,4,0,1,1,1,1,0,0,0,0,0,0,0
+117,Aluno 117,38,Feminino,Mensal,2023-01-08,1,Pix,1,2023-12-20,12,Verão,Problemas Financeiros,11,10,0,1,1,0,1,1,1,1,1,1,1,1
+118,Aluno 118,26,Feminino,Mensal,2023-01-14,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+119,Aluno 119,38,Feminino,Anual,2023-01-02,1,Cartão,1,2023-07-14,7,Inverno,Outros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+120,Aluno 120,34,Feminino,Mensal,2023-01-13,1,Cartão,1,2023-06-08,6,Inverno,Outros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+121,Aluno 121,57,Feminino,Anual,2023-01-25,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+122,Aluno 122,54,Feminino,Anual,2023-01-18,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+123,Aluno 123,38,Masculino,Mensal,2023-01-08,1,Dinheiro,1,2023-03-22,3,Outono,Problemas Financeiros,2,2,0,1,1,0,0,0,0,0,0,0,0,0
+124,Aluno 124,37,Feminino,Anual,2023-01-11,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+125,Aluno 125,48,Feminino,Mensal,2023-01-05,1,Dinheiro,1,2023-08-04,8,Inverno,Outros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+126,Aluno 126,38,Masculino,Anual,2023-01-19,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+127,Aluno 127,19,Feminino,Anual,2023-01-05,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+128,Aluno 128,27,Masculino,Anual,2023-01-13,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+129,Aluno 129,36,Feminino,Anual,2023-01-25,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+130,Aluno 130,30,Masculino,Anual,2023-01-09,1,Cartão,1,2023-07-10,7,Inverno,Outros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+131,Aluno 131,36,Masculino,Mensal,2023-01-08,1,Dinheiro,1,2023-07-28,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+132,Aluno 132,46,Feminino,Mensal,2023-01-08,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+133,Aluno 133,19,Feminino,Mensal,2023-01-05,1,Pix,1,2023-06-20,6,Inverno,Problemas Financeiros,5,4,0,1,1,1,0,1,0,0,0,0,0,0
+134,Aluno 134,25,Feminino,Mensal,2023-01-23,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+135,Aluno 135,33,Feminino,Mensal,2023-01-10,1,Pix,1,2023-06-22,6,Inverno,Problemas Financeiros,5,4,0,1,1,1,0,1,0,0,0,0,0,0
+136,Aluno 136,19,Feminino,Anual,2023-01-19,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+137,Aluno 137,58,Feminino,Anual,2023-01-23,1,Cartão,1,2023-08-13,8,Inverno,Outros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+138,Aluno 138,40,Feminino,Mensal,2023-01-23,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+139,Aluno 139,51,Masculino,Mensal,2023-01-26,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+140,Aluno 140,38,Feminino,Anual,2023-01-03,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+141,Aluno 141,32,Feminino,Anual,2023-01-27,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+142,Aluno 142,35,Feminino,Anual,2023-01-21,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+143,Aluno 143,36,Masculino,Mensal,2023-01-06,1,Dinheiro,1,2023-07-19,7,Inverno,Outros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+144,Aluno 144,58,Masculino,Anual,2023-01-20,1,Cartão,1,2023-11-09,11,Primavera,Outros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+145,Aluno 145,38,Masculino,Anual,2023-01-15,1,Cartão,1,2023-04-22,4,Outono,Outros,3,3,0,1,1,1,0,0,0,0,0,0,0,0
+146,Aluno 146,44,Feminino,Anual,2023-01-11,1,Cartão,1,2023-12-02,12,Verão,Problemas Financeiros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+147,Aluno 147,50,Masculino,Mensal,2023-01-15,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+148,Aluno 148,36,Feminino,Anual,2023-01-11,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+149,Aluno 149,51,Feminino,Mensal,2023-01-07,1,Dinheiro,1,2023-05-20,5,Outono,Outros,4,4,0,1,1,1,1,0,0,0,0,0,0,0
+150,Aluno 150,29,Feminino,Anual,2023-01-20,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+151,Aluno 151,30,Masculino,Mensal,2023-01-07,1,Cartão,1,2023-10-11,10,Primavera,Outros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+152,Aluno 152,44,Feminino,Anual,2023-01-18,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+153,Aluno 153,43,Masculino,Anual,2023-01-15,1,Cartão,1,2023-09-02,9,Primavera,Problemas Financeiros,8,8,0,1,1,1,1,1,1,1,1,0,0,0
+154,Aluno 154,23,Masculino,Mensal,2023-01-23,1,Dinheiro,1,2023-06-26,6,Inverno,Outros,5,4,0,1,1,1,0,1,0,0,0,0,0,0
+155,Aluno 155,42,Feminino,Anual,2023-01-16,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+156,Aluno 156,32,Feminino,Anual,2023-01-12,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+157,Aluno 157,30,Masculino,Anual,2023-01-08,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+158,Aluno 158,27,Feminino,Mensal,2023-01-18,1,Pix,1,2023-07-05,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+159,Aluno 159,43,Masculino,Mensal,2023-01-24,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+160,Aluno 160,44,Feminino,Anual,2023-01-04,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+161,Aluno 161,30,Masculino,Anual,2023-01-06,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+162,Aluno 162,44,Feminino,Mensal,2023-01-02,1,Dinheiro,1,2023-06-14,6,Inverno,Problemas Financeiros,5,4,0,1,1,1,0,1,0,0,0,0,0,0
+163,Aluno 163,39,Masculino,Mensal,2023-01-28,1,Pix,1,2023-07-10,7,Inverno,Outros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+164,Aluno 164,24,Masculino,Mensal,2023-01-10,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+165,Aluno 165,35,Feminino,Mensal,2023-01-09,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+166,Aluno 166,36,Masculino,Mensal,2023-01-16,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+167,Aluno 167,41,Feminino,Mensal,2023-01-05,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+168,Aluno 168,57,Masculino,Mensal,2023-01-04,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+169,Aluno 169,34,Feminino,Mensal,2023-01-13,1,Pix,1,2023-06-02,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+170,Aluno 170,35,Feminino,Anual,2023-01-10,1,Cartão,1,2023-11-27,11,Primavera,Problemas Financeiros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+171,Aluno 171,21,Feminino,Mensal,2023-01-21,1,Pix,1,2023-05-24,5,Outono,Outros,4,4,0,1,1,1,1,0,0,0,0,0,0,0
+172,Aluno 172,42,Feminino,Mensal,2023-01-06,1,Pix,1,2023-08-08,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+173,Aluno 173,26,Feminino,Anual,2023-01-15,1,Cartão,1,2023-06-04,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+174,Aluno 174,36,Feminino,Mensal,2023-01-10,1,Pix,1,2023-10-26,10,Primavera,Problemas Financeiros,9,8,0,1,1,1,0,1,1,1,1,1,0,0
+175,Aluno 175,43,Masculino,Anual,2023-01-03,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+176,Aluno 176,56,Feminino,Mensal,2023-01-04,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+177,Aluno 177,42,Feminino,Anual,2023-01-27,1,Cartão,1,2023-12-10,12,Verão,Problemas Financeiros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+178,Aluno 178,21,Feminino,Anual,2023-01-20,1,Cartão,1,2023-07-15,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+179,Aluno 179,39,Masculino,Anual,2023-01-15,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+180,Aluno 180,43,Feminino,Anual,2023-01-09,1,Cartão,1,2023-11-25,11,Primavera,Outros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+181,Aluno 181,37,Feminino,Mensal,2023-01-02,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+182,Aluno 182,45,Masculino,Anual,2023-01-01,1,Cartão,0,,,,,11,12,1,1,1,1,1,1,1,1,1,1,1,1
+183,Aluno 183,58,Feminino,Mensal,2023-01-27,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+184,Aluno 184,20,Feminino,Mensal,2023-01-17,1,Dinheiro,1,2023-03-10,3,Outono,Problemas Financeiros,2,2,0,1,1,0,0,0,0,0,0,0,0,0
+185,Aluno 185,55,Feminino,Mensal,2023-01-14,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+186,Aluno 186,37,Feminino,Mensal,2023-01-12,1,Dinheiro,0,,,,,11,10,0,1,1,1,1,1,0,1,1,1,1,1
+187,Aluno 187,31,Feminino,Mensal,2023-01-11,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+188,Aluno 188,37,Feminino,Anual,2023-01-27,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+189,Aluno 189,20,Masculino,Mensal,2023-01-09,1,Dinheiro,1,2023-11-05,11,Primavera,Problemas Financeiros,10,9,0,1,1,1,1,1,1,1,1,0,1,0
+190,Aluno 190,59,Feminino,Anual,2023-01-28,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+191,Aluno 191,60,Feminino,Anual,2023-01-14,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+192,Aluno 192,38,Feminino,Anual,2023-01-21,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+193,Aluno 193,21,Feminino,Anual,2023-01-18,1,Cartão,1,2023-06-10,6,Inverno,Outros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+194,Aluno 194,30,Feminino,Anual,2023-01-04,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+195,Aluno 195,41,Feminino,Mensal,2023-01-06,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+196,Aluno 196,18,Feminino,Anual,2023-01-03,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+197,Aluno 197,50,Feminino,Mensal,2023-01-04,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+198,Aluno 198,26,Feminino,Anual,2023-01-17,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+199,Aluno 199,34,Masculino,Anual,2023-01-16,1,Cartão,1,2023-06-06,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+200,Aluno 200,39,Feminino,Anual,2023-01-07,1,Cartão,1,2023-04-18,4,Outono,Problemas Financeiros,3,3,0,1,1,1,0,0,0,0,0,0,0,0
+201,Aluno 201,37,Masculino,Mensal,2023-02-25,2,Pix,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+202,Aluno 202,34,Masculino,Anual,2023-01-10,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+203,Aluno 203,50,Masculino,Anual,2023-01-15,1,Cartão,1,2023-12-22,12,Verão,Outros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+204,Aluno 204,32,Feminino,Anual,2023-02-11,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+205,Aluno 205,59,Masculino,Mensal,2023-02-08,2,Pix,1,2023-07-12,7,Inverno,Problemas Financeiros,5,5,0,0,1,1,1,1,1,0,0,0,0,0
+206,Aluno 206,34,Masculino,Anual,2023-12-16,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+207,Aluno 207,48,Masculino,Anual,2023-12-26,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+208,Aluno 208,59,Masculino,Anual,2023-01-05,1,Cartão,1,2023-10-14,10,Primavera,Outros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+209,Aluno 209,40,Feminino,Mensal,2023-01-17,1,Dinheiro,1,2023-08-25,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+210,Aluno 210,18,Masculino,Mensal,2023-12-05,12,Dinheiro,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+211,Aluno 211,47,Feminino,Anual,2023-02-20,2,Cartão,1,2023-10-18,10,Primavera,Outros,8,8,0,0,1,1,1,1,1,1,1,1,0,0
+212,Aluno 212,42,Feminino,Anual,2023-12-28,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+213,Aluno 213,58,Feminino,Anual,2023-12-02,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+214,Aluno 214,29,Feminino,Anual,2023-01-24,1,Cartão,1,2023-08-12,8,Inverno,Problemas Financeiros,7,7,0,1,1,1,1,1,1,1,0,0,0,0
+215,Aluno 215,59,Feminino,Mensal,2023-01-23,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+216,Aluno 216,19,Feminino,Anual,2023-01-10,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+217,Aluno 217,35,Feminino,Mensal,2023-02-19,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+218,Aluno 218,27,Feminino,Mensal,2023-12-28,12,Pix,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+219,Aluno 219,43,Feminino,Anual,2023-12-05,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+220,Aluno 220,41,Feminino,Anual,2023-02-22,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+221,Aluno 221,48,Feminino,Anual,2023-12-18,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+222,Aluno 222,35,Feminino,Anual,2023-12-10,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+223,Aluno 223,35,Feminino,Anual,2023-02-28,2,Cartão,1,2023-10-15,10,Primavera,Outros,8,8,0,0,1,1,1,1,1,1,1,1,0,0
+224,Aluno 224,60,Feminino,Anual,2023-01-08,1,Cartão,1,2023-12-26,12,Verão,Problemas Financeiros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+225,Aluno 225,32,Feminino,Anual,2023-12-10,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+226,Aluno 226,50,Feminino,Anual,2023-02-01,2,Cartão,0,,,,,10,11,0,1,1,1,1,1,1,1,1,1,1,1
+227,Aluno 227,43,Feminino,Mensal,2023-12-16,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+228,Aluno 228,54,Masculino,Mensal,2023-02-08,2,Pix,1,2023-03-25,3,Outono,Problemas Financeiros,1,1,0,0,1,0,0,0,0,0,0,0,0,0
+229,Aluno 229,41,Feminino,Mensal,2023-01-21,1,Pix,1,2023-12-11,12,Verão,Outros,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+230,Aluno 230,31,Feminino,Anual,2023-01-19,1,Cartão,1,2023-07-20,7,Inverno,Outros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+231,Aluno 231,25,Feminino,Anual,2023-02-24,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+232,Aluno 232,27,Feminino,Anual,2023-12-17,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+233,Aluno 233,50,Masculino,Anual,2023-02-26,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+234,Aluno 234,52,Feminino,Mensal,2023-01-05,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+235,Aluno 235,28,Masculino,Anual,2023-12-12,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+236,Aluno 236,34,Feminino,Anual,2023-12-04,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+237,Aluno 237,43,Feminino,Anual,2023-12-13,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+238,Aluno 238,57,Masculino,Mensal,2023-01-16,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+239,Aluno 239,53,Feminino,Anual,2023-12-08,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+240,Aluno 240,41,Feminino,Anual,2023-12-10,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+241,Aluno 241,25,Feminino,Mensal,2023-02-16,2,Pix,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+242,Aluno 242,29,Feminino,Mensal,2023-02-12,2,Dinheiro,0,,,,,10,8,0,0,1,1,1,1,1,1,0,0,1,1
+243,Aluno 243,45,Feminino,Anual,2023-12-24,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+244,Aluno 244,53,Masculino,Mensal,2023-12-14,12,Dinheiro,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+245,Aluno 245,30,Masculino,Anual,2023-01-15,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+246,Aluno 246,29,Feminino,Anual,2023-01-22,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+247,Aluno 247,54,Feminino,Anual,2023-01-13,1,Cartão,1,2023-11-27,11,Primavera,Problemas Financeiros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+248,Aluno 248,58,Feminino,Anual,2023-01-22,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+249,Aluno 249,41,Feminino,Mensal,2023-02-08,2,Pix,1,2023-07-10,7,Inverno,Problemas Financeiros,5,5,0,0,1,1,1,1,1,0,0,0,0,0
+250,Aluno 250,47,Masculino,Mensal,2023-12-07,12,Pix,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+251,Aluno 251,49,Feminino,Mensal,2023-01-26,1,Dinheiro,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+252,Aluno 252,18,Masculino,Mensal,2023-12-09,12,Pix,1,2023-12-19,12,Verão,Problemas Financeiros,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+253,Aluno 253,25,Masculino,Mensal,2023-01-12,1,Pix,0,,,,,11,10,0,1,1,1,1,0,1,1,1,1,1,1
+254,Aluno 254,29,Masculino,Anual,2023-01-06,1,Cartão,1,2023-11-25,11,Primavera,Outros,10,10,0,1,1,1,1,1,1,1,1,1,1,0
+255,Aluno 255,25,Feminino,Anual,2023-12-04,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+256,Aluno 256,36,Masculino,Anual,2023-12-19,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+257,Aluno 257,37,Feminino,Mensal,2023-12-17,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+258,Aluno 258,42,Feminino,Mensal,2023-02-28,2,Pix,1,2023-07-06,7,Inverno,Problemas Financeiros,5,5,0,0,1,1,1,1,1,0,0,0,0,0
+259,Aluno 259,43,Feminino,Anual,2023-12-15,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+260,Aluno 260,23,Feminino,Mensal,2023-01-09,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+261,Aluno 261,40,Feminino,Anual,2023-02-20,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+262,Aluno 262,36,Feminino,Anual,2023-01-26,1,Cartão,1,2023-10-19,10,Primavera,Outros,9,9,0,1,1,1,1,1,1,1,1,1,0,0
+263,Aluno 263,51,Masculino,Mensal,2023-02-08,2,Dinheiro,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+264,Aluno 264,49,Feminino,Anual,2023-02-24,2,Cartão,1,2023-11-13,11,Primavera,Problemas Financeiros,9,9,0,0,1,1,1,1,1,1,1,1,1,0
+265,Aluno 265,35,Feminino,Anual,2023-02-05,2,Cartão,0,,,,,10,10,0,0,1,1,1,1,1,1,1,1,1,1
+266,Aluno 266,36,Feminino,Mensal,2023-01-14,1,Pix,1,2023-07-22,7,Inverno,Problemas Financeiros,6,6,0,1,1,1,1,1,1,0,0,0,0,0
+267,Aluno 267,45,Feminino,Mensal,2023-01-19,1,Cartão,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+268,Aluno 268,39,Masculino,Mensal,2023-02-28,2,Dinheiro,1,2023-04-19,4,Outono,Problemas Financeiros,2,2,0,0,1,1,0,0,0,0,0,0,0,0
+269,Aluno 269,45,Feminino,Mensal,2023-12-10,12,Dinheiro,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+270,Aluno 270,39,Feminino,Mensal,2023-12-16,12,Pix,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+271,Aluno 271,24,Feminino,Anual,2023-01-25,1,Cartão,1,2023-06-06,6,Inverno,Problemas Financeiros,5,5,0,1,1,1,1,1,0,0,0,0,0,0
+272,Aluno 272,28,Feminino,Anual,2023-12-25,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+273,Aluno 273,41,Masculino,Mensal,2023-12-27,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+274,Aluno 274,19,Feminino,Anual,2023-12-25,12,Cartão,0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+275,Aluno 275,32,Feminino,Mensal,2023-01-19,1,Pix,0,,,,,11,11,0,1,1,1,1,1,1,1,1,1,1,1
+276,Aluno 276,22,Feminino,Mensal,2023-05-17,5,Pix,1,2023-12-20,12,Verão,Problemas Financeiros,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+277,Aluno 277,34,Feminino,Anual,2023-03-12,3,Cartão,1,2023-08-03,8,Inverno,Outros,5,5,0,0,0,1,1,1,1,1,0,0,0,0
+278,Aluno 278,31,Feminino,Mensal,2023-03-06,3,Pix,1,2023-06-23,6,Inverno,Problemas Financeiros,3,3,0,0,0,1,1,1,0,0,0,0,0,0
+279,Aluno 279,21,Masculino,Mensal,2023-04-22,4,Dinheiro,0,,,,,8,6,0,0,0,0,1,1,1,1,1,0,0,1
+280,Aluno 280,40,Feminino,Anual,2023-04-07,4,Cartão,1,2023-12-17,12,Verão,Problemas Financeiros,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+281,Aluno 281,25,Masculino,Anual,2023-03-10,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+282,Aluno 282,40,Feminino,Anual,2023-03-08,3,Cartão,1,2023-10-16,10,Primavera,Problemas Financeiros,7,7,0,0,0,1,1,1,1,1,1,1,0,0
+283,Aluno 283,40,Feminino,Mensal,2023-04-07,4,Pix,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+284,Aluno 284,45,Masculino,Anual,2023-04-04,4,Cartão,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+285,Aluno 285,45,Feminino,Mensal,2023-04-18,4,Pix,1,2023-10-05,10,Primavera,Problemas Financeiros,6,6,0,0,0,0,1,1,1,1,1,1,0,0
+286,Aluno 286,37,Masculino,Anual,2023-03-13,3,Cartão,1,2023-07-21,7,Inverno,Problemas Financeiros,4,4,0,0,0,1,1,1,1,0,0,0,0,0
+287,Aluno 287,20,Masculino,Mensal,2023-03-28,3,Dinheiro,1,2023-04-12,4,Outono,Problemas Financeiros,1,1,0,0,0,1,0,0,0,0,0,0,0,0
+288,Aluno 288,35,Feminino,Anual,2023-05-21,5,Cartão,1,2023-10-25,10,Primavera,Outros,5,5,0,0,0,0,0,1,1,1,1,1,0,0
+289,Aluno 289,25,Feminino,Mensal,2023-03-26,3,Dinheiro,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+290,Aluno 290,36,Masculino,Anual,2023-03-14,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+291,Aluno 291,29,Masculino,Anual,2023-05-03,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+292,Aluno 292,31,Feminino,Anual,2023-03-11,3,Cartão,1,2023-08-26,8,Inverno,Outros,5,5,0,0,0,1,1,1,1,1,0,0,0,0
+293,Aluno 293,22,Masculino,Mensal,2023-05-07,5,Pix,1,2023-06-04,6,Inverno,Problemas Financeiros,1,1,0,0,0,0,0,1,0,0,0,0,0,0
+294,Aluno 294,32,Masculino,Mensal,2023-03-05,3,Pix,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+295,Aluno 295,27,Feminino,Mensal,2023-03-06,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+296,Aluno 296,41,Masculino,Anual,2023-05-25,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+297,Aluno 297,43,Feminino,Anual,2023-05-11,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+298,Aluno 298,22,Feminino,Anual,2023-05-10,5,Cartão,1,2023-07-03,7,Inverno,Outros,2,2,0,0,0,0,0,1,1,0,0,0,0,0
+299,Aluno 299,40,Masculino,Anual,2023-05-03,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+300,Aluno 300,35,Feminino,Mensal,2023-04-03,4,Dinheiro,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+301,Aluno 301,59,Feminino,Mensal,2023-05-17,5,Pix,1,2023-10-02,10,Primavera,Outros,5,5,0,0,0,0,0,1,1,1,1,1,0,0
+302,Aluno 302,40,Feminino,Mensal,2023-05-21,5,Dinheiro,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+303,Aluno 303,40,Feminino,Mensal,2023-04-04,4,Pix,1,2023-09-18,9,Primavera,Outros,5,5,0,0,0,0,1,1,1,1,1,0,0,0
+304,Aluno 304,50,Masculino,Mensal,2023-05-06,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+305,Aluno 305,44,Feminino,Anual,2023-05-17,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+306,Aluno 306,33,Feminino,Anual,2023-04-14,4,Cartão,1,2023-05-06,5,Outono,Problemas Financeiros,1,1,0,0,0,0,1,0,0,0,0,0,0,0
+307,Aluno 307,43,Masculino,Mensal,2023-05-11,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+308,Aluno 308,24,Feminino,Anual,2023-04-09,4,Cartão,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+309,Aluno 309,42,Masculino,Mensal,2023-03-19,3,Dinheiro,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+310,Aluno 310,55,Feminino,Anual,2023-05-23,5,Cartão,1,2023-09-09,9,Primavera,Outros,4,4,0,0,0,0,0,1,1,1,1,0,0,0
+311,Aluno 311,25,Feminino,Mensal,2023-05-13,5,Dinheiro,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+312,Aluno 312,32,Feminino,Mensal,2023-05-27,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+313,Aluno 313,60,Masculino,Mensal,2023-05-14,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+314,Aluno 314,19,Feminino,Anual,2023-03-07,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+315,Aluno 315,46,Feminino,Mensal,2023-03-05,3,Pix,1,2023-11-19,11,Primavera,Problemas Financeiros,8,8,0,0,0,1,1,1,1,1,1,1,1,0
+316,Aluno 316,51,Feminino,Mensal,2023-05-27,5,Pix,1,2023-12-17,12,Verão,Problemas Financeiros,7,6,0,0,0,0,0,1,1,1,1,1,0,1
+317,Aluno 317,38,Masculino,Anual,2023-05-05,5,Cartão,1,2023-08-23,8,Inverno,Problemas Financeiros,3,3,0,0,0,0,0,1,1,1,0,0,0,0
+318,Aluno 318,26,Feminino,Mensal,2023-05-26,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+319,Aluno 319,44,Masculino,Mensal,2023-04-22,4,Dinheiro,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+320,Aluno 320,59,Masculino,Anual,2023-05-26,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+321,Aluno 321,38,Feminino,Anual,2023-04-27,4,Cartão,1,2023-06-28,6,Inverno,Outros,2,2,0,0,0,0,1,1,0,0,0,0,0,0
+322,Aluno 322,43,Feminino,Anual,2023-04-25,4,Cartão,1,2023-08-11,8,Inverno,Problemas Financeiros,4,4,0,0,0,0,1,1,1,1,0,0,0,0
+323,Aluno 323,33,Feminino,Anual,2023-03-27,3,Cartão,1,2023-04-14,4,Outono,Problemas Financeiros,1,1,0,0,0,1,0,0,0,0,0,0,0,0
+324,Aluno 324,40,Feminino,Anual,2023-03-21,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+325,Aluno 325,33,Feminino,Mensal,2023-05-28,5,Cartão,1,2023-08-04,8,Inverno,Outros,3,3,0,0,0,0,0,1,1,1,0,0,0,0
+326,Aluno 326,23,Feminino,Mensal,2023-04-17,4,Dinheiro,1,2023-10-04,10,Primavera,Outros,6,6,0,0,0,0,1,1,1,1,1,1,0,0
+327,Aluno 327,35,Feminino,Mensal,2023-04-01,4,Dinheiro,1,2023-06-19,6,Inverno,Problemas Financeiros,2,2,0,0,0,1,1,0,0,0,0,0,0,0
+328,Aluno 328,34,Feminino,Anual,2023-03-13,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+329,Aluno 329,33,Masculino,Mensal,2023-03-27,3,Dinheiro,0,,,,,9,8,0,0,0,1,1,1,1,1,0,1,1,1
+330,Aluno 330,32,Masculino,Mensal,2023-03-10,3,Pix,0,,,,,9,8,0,0,0,1,0,1,1,1,1,1,1,1
+331,Aluno 331,36,Masculino,Mensal,2023-04-15,4,Cartão,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+332,Aluno 332,54,Feminino,Mensal,2023-03-27,3,Dinheiro,1,2023-10-22,10,Primavera,Outros,7,7,0,0,0,1,1,1,1,1,1,1,0,0
+333,Aluno 333,57,Feminino,Anual,2023-03-25,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+334,Aluno 334,31,Feminino,Mensal,2023-04-21,4,Pix,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+335,Aluno 335,36,Masculino,Mensal,2023-05-18,5,Dinheiro,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+336,Aluno 336,37,Feminino,Mensal,2023-03-10,3,Cartão,1,2023-11-10,11,Primavera,Problemas Financeiros,8,8,0,0,0,1,1,1,1,1,1,1,1,0
+337,Aluno 337,41,Feminino,Mensal,2023-04-06,4,Cartão,0,,,,,8,8,0,0,0,0,1,1,1,1,1,1,1,1
+338,Aluno 338,23,Feminino,Anual,2023-03-17,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+339,Aluno 339,47,Feminino,Mensal,2023-04-02,4,Dinheiro,1,2023-11-08,11,Primavera,Problemas Financeiros,7,7,0,0,0,0,1,1,1,1,1,1,1,0
+340,Aluno 340,59,Feminino,Anual,2023-05-01,5,Cartão,1,2023-06-16,6,Inverno,Problemas Financeiros,1,2,0,0,0,0,1,1,0,0,0,0,0,0
+341,Aluno 341,22,Feminino,Mensal,2023-05-21,5,Cartão,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+342,Aluno 342,40,Feminino,Anual,2023-03-02,3,Cartão,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+343,Aluno 343,32,Feminino,Mensal,2023-04-23,4,Cartão,1,2023-07-22,7,Inverno,Problemas Financeiros,3,3,0,0,0,0,1,1,1,0,0,0,0,0
+344,Aluno 344,27,Feminino,Mensal,2023-05-25,5,Pix,0,,,,,7,7,0,0,0,0,0,1,1,1,1,1,1,1
+345,Aluno 345,20,Masculino,Mensal,2023-03-02,3,Pix,0,,,,,9,9,0,0,0,1,1,1,1,1,1,1,1,1
+346,Aluno 346,31,Feminino,Anual,2023-05-16,5,Cartão,1,2023-07-25,7,Inverno,Problemas Financeiros,2,2,0,0,0,0,0,1,1,0,0,0,0,0
+347,Aluno 347,45,Feminino,Mensal,2023-04-28,4,Dinheiro,0,,,,,8,7,0,0,0,0,1,1,0,1,1,1,1,1
+348,Aluno 348,52,Masculino,Anual,2023-04-04,4,Cartão,1,2023-06-02,6,Inverno,Problemas Financeiros,2,2,0,0,0,0,1,1,0,0,0,0,0,0
+349,Aluno 349,35,Masculino,Anual,2023-05-15,5,Cartão,1,2023-08-05,8,Inverno,Outros,3,3,0,0,0,0,0,1,1,1,0,0,0,0
+350,Aluno 350,33,Masculino,Mensal,2023-05-16,5,Dinheiro,1,2023-06-28,6,Inverno,Outros,1,1,0,0,0,0,0,1,0,0,0,0,0,0
+351,Aluno 351,48,Feminino,Anual,2023-06-24,6,Cartão,1,2023-07-02,7,Inverno,Problemas Financeiros,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+352,Aluno 352,35,Feminino,Mensal,2023-07-11,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+353,Aluno 353,31,Feminino,Anual,2023-07-15,7,Cartão,1,2023-09-08,9,Primavera,Problemas Financeiros,2,2,0,0,0,0,0,0,0,1,1,0,0,0
+354,Aluno 354,35,Feminino,Anual,2023-07-15,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+355,Aluno 355,52,Feminino,Anual,2023-08-14,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+356,Aluno 356,59,Feminino,Mensal,2023-08-21,8,Pix,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+357,Aluno 357,37,Feminino,Mensal,2023-06-28,6,Pix,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+358,Aluno 358,47,Feminino,Mensal,2023-06-08,6,Pix,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+359,Aluno 359,33,Masculino,Anual,2023-08-02,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+360,Aluno 360,43,Feminino,Anual,2023-07-15,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+361,Aluno 361,39,Masculino,Anual,2023-07-11,7,Cartão,1,2023-09-17,9,Primavera,Problemas Financeiros,2,2,0,0,0,0,0,0,0,1,1,0,0,0
+362,Aluno 362,29,Feminino,Mensal,2023-08-06,8,Pix,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+363,Aluno 363,33,Feminino,Mensal,2023-07-23,7,Dinheiro,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+364,Aluno 364,60,Feminino,Anual,2023-08-16,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+365,Aluno 365,25,Feminino,Mensal,2023-06-23,6,Dinheiro,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+366,Aluno 366,23,Feminino,Anual,2023-08-12,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+367,Aluno 367,39,Masculino,Anual,2023-07-28,7,Cartão,1,2023-12-27,12,Verão,Problemas Financeiros,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+368,Aluno 368,44,Feminino,Mensal,2023-08-08,8,Dinheiro,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+369,Aluno 369,27,Feminino,Mensal,2023-07-01,7,Pix,0,,,,,5,6,0,0,0,0,0,0,1,1,1,1,1,1
+370,Aluno 370,39,Feminino,Anual,2023-08-05,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+371,Aluno 371,23,Feminino,Anual,2023-07-23,7,Cartão,1,2023-08-02,8,Inverno,Problemas Financeiros,1,1,0,0,0,0,0,0,0,1,0,0,0,0
+372,Aluno 372,38,Masculino,Anual,2023-08-03,8,Cartão,1,2023-08-09,8,Inverno,Problemas Financeiros,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+373,Aluno 373,31,Feminino,Mensal,2023-07-22,7,Dinheiro,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+374,Aluno 374,25,Feminino,Mensal,2023-07-17,7,Pix,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+375,Aluno 375,21,Masculino,Mensal,2023-06-10,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+376,Aluno 376,31,Feminino,Mensal,2023-08-10,8,Dinheiro,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+377,Aluno 377,29,Masculino,Anual,2023-06-21,6,Cartão,1,2023-07-27,7,Inverno,Problemas Financeiros,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+378,Aluno 378,38,Feminino,Mensal,2023-08-05,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+379,Aluno 379,41,Feminino,Anual,2023-08-02,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+380,Aluno 380,19,Masculino,Mensal,2023-08-09,8,Cartão,1,2023-08-21,8,Inverno,Problemas Financeiros,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+381,Aluno 381,46,Feminino,Anual,2023-08-21,8,Cartão,1,2023-11-04,11,Primavera,Problemas Financeiros,3,3,0,0,0,0,0,0,0,0,1,1,1,0
+382,Aluno 382,53,Feminino,Anual,2023-08-10,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+383,Aluno 383,48,Feminino,Anual,2023-07-15,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+384,Aluno 384,21,Feminino,Anual,2023-07-16,7,Cartão,1,2023-09-07,9,Primavera,Outros,2,2,0,0,0,0,0,0,0,1,1,0,0,0
+385,Aluno 385,32,Feminino,Mensal,2023-08-11,8,Dinheiro,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+386,Aluno 386,52,Masculino,Anual,2023-06-25,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+387,Aluno 387,39,Feminino,Anual,2023-06-15,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+388,Aluno 388,35,Feminino,Mensal,2023-06-10,6,Pix,1,2023-07-24,7,Inverno,Problemas Financeiros,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+389,Aluno 389,52,Masculino,Anual,2023-06-28,6,Cartão,1,2023-11-23,11,Primavera,Problemas Financeiros,5,5,0,0,0,0,0,0,1,1,1,1,1,0
+390,Aluno 390,49,Masculino,Anual,2023-06-25,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+391,Aluno 391,60,Feminino,Anual,2023-07-10,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+392,Aluno 392,23,Feminino,Anual,2023-08-15,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+393,Aluno 393,28,Masculino,Anual,2023-06-02,6,Cartão,1,2023-08-03,8,Inverno,Problemas Financeiros,2,2,0,0,0,0,0,0,1,1,0,0,0,0
+394,Aluno 394,40,Feminino,Anual,2023-07-18,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+395,Aluno 395,24,Feminino,Mensal,2023-08-12,8,Dinheiro,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+396,Aluno 396,33,Masculino,Anual,2023-06-19,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+397,Aluno 397,33,Feminino,Anual,2023-06-13,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+398,Aluno 398,45,Feminino,Anual,2023-08-22,8,Cartão,1,2023-11-10,11,Primavera,Problemas Financeiros,3,3,0,0,0,0,0,0,0,0,1,1,1,0
+399,Aluno 399,25,Feminino,Mensal,2023-07-26,7,Dinheiro,1,2023-10-08,10,Primavera,Problemas Financeiros,3,3,0,0,0,0,0,0,0,1,1,1,0,0
+400,Aluno 400,39,Masculino,Anual,2023-06-07,6,Cartão,1,2023-07-20,7,Inverno,Outros,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+401,Aluno 401,34,Feminino,Mensal,2023-08-05,6,Pix,0,2023-11-15,,,,4,3,0,0,0,0,0,0,0,1,1,0,1,0
+402,Aluno 402,48,Masculino,Anual,2023-06-20,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+403,Aluno 403,25,Masculino,Anual,2023-06-13,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+404,Aluno 404,45,Masculino,Anual,2023-08-11,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+405,Aluno 405,37,Feminino,Anual,2023-08-19,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+406,Aluno 406,49,Feminino,Anual,2023-07-22,7,Cartão,1,2023-07-27,7,Inverno,Problemas Financeiros,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+407,Aluno 407,34,Feminino,Anual,2023-08-28,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+408,Aluno 408,19,Feminino,Anual,2023-07-21,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+409,Aluno 409,46,Masculino,Mensal,2023-06-19,6,Cartão,1,2023-06-27,6,Inverno,Problemas Financeiros,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+410,Aluno 410,38,Feminino,Anual,2023-06-27,6,Cartão,1,2023-11-19,11,Primavera,Problemas Financeiros,5,5,0,0,0,0,0,0,1,1,1,1,1,0
+411,Aluno 411,20,Feminino,Mensal,2023-06-15,6,Pix,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+412,Aluno 412,26,Feminino,Mensal,2023-08-25,8,Dinheiro,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+413,Aluno 413,36,Feminino,Mensal,2023-06-17,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+414,Aluno 414,31,Feminino,Anual,2023-08-13,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+415,Aluno 415,27,Feminino,Anual,2023-08-12,8,Cartão,1,2023-12-06,12,Verão,Problemas Financeiros,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+416,Aluno 416,52,Feminino,Anual,2023-08-16,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+417,Aluno 417,29,Feminino,Anual,2023-06-10,6,Cartão,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+418,Aluno 418,44,Masculino,Anual,2023-07-16,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+419,Aluno 419,56,Feminino,Anual,2023-07-04,7,Cartão,0,,,,,5,5,0,0,0,0,0,0,0,1,1,1,1,1
+420,Aluno 420,38,Feminino,Anual,2023-07-25,7,Cartão,1,2023-08-19,8,Inverno,Problemas Financeiros,1,1,0,0,0,0,0,0,0,1,0,0,0,0
+421,Aluno 421,30,Masculino,Anual,2023-08-03,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+422,Aluno 422,35,Feminino,Anual,2023-08-16,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+423,Aluno 423,49,Feminino,Anual,2023-08-23,8,Cartão,0,,,,,4,4,0,0,0,0,0,0,0,0,1,1,1,1
+424,Aluno 424,24,Feminino,Mensal,2023-06-22,6,Pix,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+425,Aluno 425,28,Masculino,Mensal,2023-06-14,6,Pix,0,,,,,6,6,0,0,0,0,0,0,1,1,1,1,1,1
+426,Aluno 426,36,Feminino,Mensal,2023-11-06,11,Pix,1,2023-11-18,11,Primavera,Problemas Financeiros,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+427,Aluno 427,56,Feminino,Anual,2023-10-21,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+428,Aluno 428,58,Feminino,Anual,2023-10-21,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+429,Aluno 429,46,Feminino,Mensal,2023-11-24,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+430,Aluno 430,20,Masculino,Mensal,2023-09-02,9,Dinheiro,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+431,Aluno 431,34,Masculino,Anual,2023-09-24,9,Cartão,1,2023-12-26,12,Verão,Problemas Financeiros,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+432,Aluno 432,56,Masculino,Mensal,2023-07-21,10,Pix,0,2023-11-20,,,,5,1,0,0,0,0,0,0,1,0,1,0,1,0
+433,Aluno 433,56,Feminino,Anual,2023-10-15,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+434,Aluno 434,38,Masculino,Anual,2023-09-28,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+435,Aluno 435,30,Feminino,Mensal,2023-09-24,9,Dinheiro,1,2023-10-24,10,Primavera,Outros,1,1,0,0,0,0,0,0,0,0,0,1,0,0
+436,Aluno 436,29,Feminino,Mensal,2023-11-11,11,Pix,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+437,Aluno 437,39,Masculino,Mensal,2023-11-28,11,Pix,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+438,Aluno 438,34,Feminino,Anual,2023-11-11,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+439,Aluno 439,42,Feminino,Mensal,2023-10-11,10,Pix,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+440,Aluno 440,18,Masculino,Anual,2023-09-15,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+441,Aluno 441,58,Masculino,Anual,2023-11-24,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+442,Aluno 442,29,Feminino,Anual,2023-11-08,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+443,Aluno 443,25,Feminino,Anual,2023-09-13,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+444,Aluno 444,56,Feminino,Anual,2023-11-04,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+445,Aluno 445,57,Feminino,Anual,2023-11-08,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+446,Aluno 446,25,Feminino,Mensal,2023-11-20,11,Dinheiro,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+447,Aluno 447,43,Feminino,Anual,2023-11-26,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+448,Aluno 448,28,Feminino,Mensal,2023-11-28,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+449,Aluno 449,38,Masculino,Anual,2023-09-19,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+450,Aluno 450,50,Feminino,Mensal,2023-11-05,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+451,Aluno 451,51,Feminino,Anual,2023-09-22,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+452,Aluno 452,40,Feminino,Mensal,2023-10-26,10,Cartão,0,2023-04-13,,,,8,6,0,0,0,1,1,1,1,1,0,0,1,0
+453,Aluno 453,25,Feminino,Anual,2023-10-19,10,Cartão,1,2023-12-24,12,Verão,Problemas Financeiros,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+454,Aluno 454,36,Feminino,Anual,2023-11-01,11,Cartão,0,,,,,1,2,0,0,0,0,0,0,0,0,0,0,1,1
+455,Aluno 455,49,Feminino,Mensal,2023-09-02,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+456,Aluno 456,43,Feminino,Mensal,2023-10-02,10,Pix,0,2023-11-13,,,,1,1,0,0,0,0,0,0,0,0,0,0,1,0
+457,Aluno 457,27,Feminino,Mensal,2023-11-21,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+458,Aluno 458,33,Masculino,Anual,2023-10-28,10,Cartão,1,2023-12-28,12,Verão,Outros,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+459,Aluno 459,33,Masculino,Mensal,2023-11-28,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+460,Aluno 460,42,Feminino,Anual,2023-09-06,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+461,Aluno 461,34,Masculino,Mensal,2023-09-20,9,Cartão,0,2023-12-22,,,,3,3,0,0,0,0,0,0,0,0,1,1,1,1
+462,Aluno 462,19,Feminino,Anual,2023-10-22,10,Cartão,1,2023-11-13,11,Primavera,Problemas Financeiros,1,1,0,0,0,0,0,0,0,0,0,0,1,0
+463,Aluno 463,35,Masculino,Anual,2023-09-08,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+464,Aluno 464,26,Feminino,Mensal,2023-09-02,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+465,Aluno 465,34,Masculino,Mensal,2023-09-03,9,Pix,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+466,Aluno 466,20,Feminino,Mensal,2023-11-02,11,Pix,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+467,Aluno 467,28,Feminino,Mensal,2023-09-17,9,Pix,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+468,Aluno 468,28,Masculino,Anual,2023-11-20,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+469,Aluno 469,49,Masculino,Mensal,2023-09-22,9,Dinheiro,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+470,Aluno 470,34,Feminino,Anual,2023-09-18,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+471,Aluno 471,53,Masculino,Mensal,2023-11-14,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+472,Aluno 472,21,Feminino,Anual,2023-11-22,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+473,Aluno 473,38,Feminino,Anual,2023-10-05,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+474,Aluno 474,27,Feminino,Anual,2023-09-28,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+475,Aluno 475,51,Feminino,Mensal,2023-09-18,9,Dinheiro,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+476,Aluno 476,34,Feminino,Mensal,2023-09-09,9,Dinheiro,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+477,Aluno 477,42,Feminino,Anual,2023-10-03,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+478,Aluno 478,50,Feminino,Mensal,2023-10-22,10,Dinheiro,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+479,Aluno 479,20,Feminino,Mensal,2023-11-24,11,Pix,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+480,Aluno 480,28,Feminino,Mensal,2023-10-01,10,Dinheiro,0,,,,,2,3,0,0,0,0,0,0,0,0,0,1,1,1
+481,Aluno 481,27,Feminino,Mensal,2023-10-08,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+482,Aluno 482,44,Feminino,Anual,2023-09-18,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+483,Aluno 483,30,Feminino,Anual,2023-11-21,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+484,Aluno 484,29,Feminino,Anual,2023-10-04,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+485,Aluno 485,44,Masculino,Anual,2023-09-12,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+486,Aluno 486,20,Feminino,Mensal,2023-09-01,9,Cartão,0,,,,,3,4,0,0,0,0,0,0,0,0,1,1,1,1
+487,Aluno 487,56,Feminino,Anual,2023-10-05,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+488,Aluno 488,28,Feminino,Mensal,2023-11-21,11,Dinheiro,1,2023-12-11,12,Verão,Problemas Financeiros,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+489,Aluno 489,32,Masculino,Anual,2023-11-21,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+490,Aluno 490,36,Masculino,Anual,2023-09-05,9,Cartão,1,2023-12-19,12,Verão,Outros,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+491,Aluno 491,37,Masculino,Mensal,2023-09-27,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+492,Aluno 492,57,Masculino,Mensal,2023-10-05,10,Pix,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+493,Aluno 493,28,Masculino,Mensal,2023-09-17,9,Pix,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+494,Aluno 494,21,Feminino,Anual,2023-11-16,11,Cartão,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,0,1
+495,Aluno 495,38,Feminino,Anual,2023-09-01,9,Cartão,0,,,,,3,4,0,0,0,0,0,0,0,0,1,1,1,1
+496,Aluno 496,30,Feminino,Anual,2023-09-17,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+497,Aluno 497,43,Masculino,Mensal,2023-09-17,9,Pix,0,,,,,3,3,0,0,0,0,0,0,0,0,0,1,1,1
+498,Aluno 498,27,Feminino,Anual,2023-10-09,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+499,Aluno 499,23,Masculino,Anual,2023-10-19,10,Cartão,0,,,,,2,2,0,0,0,0,0,0,0,0,0,0,1,1
+501,Aluno teste 1,34,Feminino,Mensal,2023-08-05,6,Pix,0,,,,,4,3,0,0,0,0,0,0,0,1,1,0,1,0
+502,Aluno teste 2,56,Masculino,Mensal,2023-07-21,10,Dinheiro,0,,,,,5,1,0,0,0,0,0,0,1,0,1,0,1,0
+503,Aluno teste 3,40,Feminino,Mensal,2023-10-26,10,Cartão,0,,,,,8,6,0,0,0,1,1,1,1,1,0,0,1,0
+504,Aluno teste 4,43,Feminino,Mensal,2023-10-02,10,Pix,0,,,,,1,1,0,0,0,0,0,0,0,0,0,0,1,0
+505,Aluno teste 5,34,Masculino,Mensal,2023-09-20,9,Cartão,0,,,,,3,3,0,0,0,0,0,0,0,0,1,1,1,1
+506,Aluno teste 1,34,Feminino,Mensal,2023-08-05,6,Pix,1,2023-12-14,Dezembro,Verão,Outros,4,3,0,0,0,0,0,0,0,1,1,0,1,0
+507,Aluno teste 2,56,Masculino,Mensal,2023-07-21,10,Dinheiro,1,2023-12-14,Dezembro,Verão,Outros,5,1,0,0,0,0,0,0,1,0,1,0,1,0
+508,Aluno teste 3,40,Feminino,Mensal,2023-10-26,10,Cartão,1,2023-12-14,Dezembro,Verão,Outros,8,6,0,0,0,1,1,1,1,1,0,0,1,0
+509,Aluno teste 4,43,Feminino,Mensal,2023-10-02,10,Pix,1,2023-12-21,Dezembro,Verão,Outros,1,1,0,0,0,0,0,0,0,0,0,0,1,0
+510,Aluno teste 5,34,Masculino,Mensal,2023-09-20,9,Cartão,1,2023-12-22,Dezembro,Verão,Outros,3,3,0,0,0,0,0,0,0,0,1,1,1,1

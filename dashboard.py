@@ -1,304 +1,182 @@
 import streamlit as st
 import pandas as pd
+import joblib
 import plotly.express as px
 import plotly.graph_objects as go
-import random
-from datetime import datetime, timedelta
 
-# --- Geração de Dados (Simulado) ---
-random.seed(42)
-total_alunos = 500
-alunos_iniciais = 200
-alunos_novos = total_alunos - alunos_iniciais
-cancelamentos = 200
+st.set_page_config(
+    page_title="Força Local – Dashboard",  
+    page_icon="🏋️",                            
+    layout="wide"                              
+)
 
-meses_geracao = pd.date_range(start="2023-01-01", end="2023-12-01", freq="MS")
 
-estacoes_geracao = {
-    "Verão": [1, 2, 12],
-    "Outono": [3, 4, 5],
-    "Inverno": [6, 7, 8],
-    "Primavera": [9, 10, 11]
-}
 
-proporcao_estacoes_geracao = {
-    "Verão": 0.35,
-    "Outono": 0.25,
-    "Inverno": 0.15,
-    "Primavera": 0.25
-}
+df_raw = pd.read_csv("academia_cancelamento_com_previsoes.csv")
+df_raw['Data de Matrícula'] = pd.to_datetime(df_raw['Data de Matrícula'], errors='coerce')
+df = df_raw.copy()
 
-motivos_cancelamento_geracao = ["Mudança de Endereço", "Problemas Financeiros", "Outros"]
-proporcao_motivos_geracao = {"Mudança de Endereço": 0.2, "Problemas Financeiros": 0.5, "Outros": 0.3}
+meses_pagamento = [c for c in df.columns if c.startswith("2024-")]
+meses_display = {mes: mes.replace("2024-", "").zfill(2) + "/2024" for mes in meses_pagamento}
 
-def gerar_data_estacao_geracao(estacao):
-    meses_estacao = estacoes_geracao[estacao]
-    mes_escolhido = random.choice(meses_estacao)
-    ano = 2023
-    dia = random.randint(1, 28)
-    return datetime(ano, mes_escolhido, dia)
+# --- Funções de dashboard
 
-def estacao_do_ano_geracao(data):
-    mes = data.month
-    for estacao, meses in estacoes_geracao.items():
-        if mes in meses:
-            return estacao
-
-def calcular_tempo_permanencia_geracao(inicio, fim):
-    return (fim.year - inicio.year) * 12 + (fim.month - inicio.month)
-
-def gerar_data_aleatoria_geracao(data_inicio, data_fim):
-    dias_diferenca = (data_fim - data_inicio).days
-    if dias_diferenca > 0:
-        dias_aleatorios = random.randint(0, dias_diferenca)
-        return data_inicio + timedelta(days=dias_aleatorios)
-    elif dias_diferenca == 0:
-        return data_inicio
-    else:
-        return data_inicio
-
-def escolher_motivo_cancelamento_geracao():
-    motivos = list(proporcao_motivos_geracao.keys())
-    pesos = list(proporcao_motivos_geracao.values())
-    return random.choices(motivos, weights=pesos, k=1)[0]
-
-nomes_geracao = [f"Aluno {i}" for i in range(1, total_alunos + 1)]
-generos_geracao = ["Masculino", "Feminino"]
-planos_geracao = ["Mensal", "Trimestral", "Anual"]
-meios_pagamento_geracao = ["Cartão", "Dinheiro", "Pix"]
-
-dados_geracao = []
-
-for i in range(alunos_iniciais):
-    nome = nomes_geracao[i]
-    idade = random.randint(18, 60)
-    genero = random.choice(generos_geracao)
-    plano = random.choice(planos_geracao)
-    meio_pagamento = random.choice(meios_pagamento_geracao)
-    data_matricula = datetime(2023, 1, 8)
-
-    linha = {
-        "ID Aluno": i + 1,
-        "Nome": nome,
-        "Idade": idade,
-        "Gênero": genero,
-        "Plano": plano,
-        "Data de Matrícula": data_matricula.strftime("%Y-%m-%d"),
-        "Mês da Matrícula": data_matricula.month,
-        "Meio de Pagamento": meio_pagamento,
-        "Status de Cancelamento": 0,
-        "Data de Cancelamento": "",
-        "Mês do Cancelamento": "",
-        "Estação do Cancelamento": "",
-        "Motivo do Cancelamento": "",
-        "Tempo de Permanência (meses)": calcular_tempo_permanencia_geracao(data_matricula, datetime(2023, 12, 31))
-    }
-    for mes in meses_geracao:
-        linha[mes.strftime("%Y-%m")] = 1 if mes >= data_matricula else 0
-    dados_geracao.append(linha)
-
-idx_novos = alunos_iniciais
-for estacao, proporcao in proporcao_estacoes_geracao.items():
-    qtd = int(proporcao * alunos_novos)
-    for _ in range(qtd):
-        nome = nomes_geracao[idx_novos]
-        idade = random.randint(18, 60)
-        genero = random.choice(generos_geracao)
-        plano = random.choice(planos_geracao)
-        meio_pagamento = random.choice(meios_pagamento_geracao)
-        data_matricula = gerar_data_estacao_geracao(estacao)
-
-        linha = {
-            "ID Aluno": idx_novos + 1,
-            "Nome": nome,
-            "Idade": idade,
-            "Gênero": genero,
-            "Plano": plano,
-            "Data de Matrícula": data_matricula.strftime("%Y-%m-%d"),
-            "Mês da Matrícula": data_matricula.month,
-            "Meio de Pagamento": meio_pagamento,
-            "Status de Cancelamento": 0,
-            "Data de Cancelamento": "",
-            "Mês do Cancelamento": "",
-            "Estação do Cancelamento": "",
-            "Motivo do Cancelamento": "",
-            "Tempo de Permanência (meses)": calcular_tempo_permanencia_geracao(data_matricula, datetime(2023, 12, 31))
-        }
-        for mes in meses_geracao:
-            linha[mes.strftime("%Y-%m")] = 1 if mes >= data_matricula else 0
-        dados_geracao.append(linha)
-        idx_novos += 1
-
-cancelar_indices_geracao = random.sample(range(total_alunos), cancelamentos)
-
-for idx_cancelar in cancelar_indices_geracao:
-    aluno = dados_geracao[idx_cancelar]
-    data_matricula = datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d")
-    data_cancelamento = None
-    mes_matricula = data_matricula.month
-    probabilidade_pico = 0.7 if mes_matricula < 6 or (mes_matricula > 8 and mes_matricula < 10) else 0.3
-    if random.random() < probabilidade_pico:
-        if mes_matricula < 6:
-            data_cancelamento = gerar_data_aleatoria_geracao(datetime(2023, 6, 1), datetime(2023, 8, 31))
-        elif mes_matricula > 8 and mes_matricula < 10:
-            data_cancelamento = gerar_data_aleatoria_geracao(datetime(2023, 10, 1), datetime(2023, 12, 31))
-        else:
-            data_cancelamento_inicio = data_matricula + timedelta(days=30)
-            data_cancelamento_fim = datetime(2023, 12, 31)
-            if data_cancelamento_inicio <= data_cancelamento_fim:
-                data_cancelamento = gerar_data_aleatoria_geracao(data_cancelamento_inicio, data_cancelamento_fim)
-    else:
-        data_cancelamento_inicio = data_matricula + timedelta(days=30)
-        data_cancelamento_fim = datetime(2023, 12, 31)
-        if data_cancelamento_inicio <= data_cancelamento_fim:
-            data_cancelamento = gerar_data_aleatoria_geracao(data_cancelamento_inicio, data_cancelamento_fim)
-
-    if data_cancelamento and data_cancelamento > data_matricula:
-        aluno["Status de Cancelamento"] = 1
-        aluno["Data de Cancelamento"] = data_cancelamento.strftime("%Y-%m-%d")
-        aluno["Mês do Cancelamento"] = data_cancelamento.month
-        aluno["Estação do Cancelamento"] = estacao_do_ano_geracao(data_cancelamento)
-        aluno["Tempo de Permanência (meses)"] = calcular_tempo_permanencia_geracao(data_matricula, data_cancelamento)
-        aluno["Motivo do Cancelamento"] = escolher_motivo_cancelamento_geracao()
-        for mes in meses_geracao:
-            if mes > data_cancelamento:
-                aluno[mes.strftime("%Y-%m")] = 0
-
-dados_cancelados_geracao = [aluno for aluno in dados_geracao if aluno["Status de Cancelamento"] == 1]
-dados_nao_cancelados_geracao = [aluno for aluno in dados_geracao if aluno["Status de Cancelamento"] == 0]
-
-if len(dados_cancelados_geracao) > cancelamentos:
-    dados_cancelados_geracao = random.sample(dados_cancelados_geracao, cancelamentos)
-elif len(dados_cancelados_geracao) < cancelamentos:
-    num_faltantes = cancelamentos - len(dados_cancelados_geracao)
-    alunos_para_forcar_cancelamento = random.sample(dados_nao_cancelados_geracao, min(num_faltantes, len(dados_nao_cancelados_geracao)))
-    for aluno in alunos_para_forcar_cancelamento:
-        data_matricula = datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d")
-        if random.random() < 0.5:
-            data_cancelamento = gerar_data_aleatoria_geracao(datetime(2023, 6, 1), datetime(2023, 8, 31))
-        else:
-            data_cancelamento = gerar_data_aleatoria_geracao(datetime(2023, 10, 1), datetime(2023, 12, 31))
-        if data_cancelamento > data_matricula:
-            aluno["Status de Cancelamento"] = 1
-            aluno["Data de Cancelamento"] = data_cancelamento.strftime("%Y-%m-%d")
-            aluno["Mês do Cancelamento"] = data_cancelamento.month
-            aluno["Estação do Cancelamento"] = estacao_do_ano_geracao(data_cancelamento)
-            aluno["Tempo de Permanência (meses)"] = calcular_tempo_permanencia_geracao(data_matricula, data_cancelamento)
-            aluno["Motivo do Cancelamento"] = escolher_motivo_cancelamento_geracao()
-            dados_cancelados_geracao.append(aluno)
-
-dados_final_geracao = dados_cancelados_geracao + dados_nao_cancelados_geracao
-df_gerado = pd.DataFrame(dados_final_geracao)
-df_gerado.to_csv("academia_dados_e_pagamentos_simulado_picos_cancelamento.csv", index=False, encoding='utf-8-sig')
-
-print("✅ Arquivo de dados simulado gerado com sucesso!")
-
-# --- Dashboard Streamlit ---
-# Carregar os dados
-df = pd.read_csv("academia_dados_e_pagamentos_simulado_picos_cancelamento.csv")
-
-# Mapeamento de meses para exibição
-meses_display = {
-    "2023-01": "Janeiro", "2023-02": "Fevereiro", "2023-03": "Março", "2023-04": "Abril",
-    "2023-05": "Maio", "2023-06": "Junho", "2023-07": "Julho", "2023-08": "Agosto",
-    "2023-09": "Setembro", "2023-10": "Outubro", "2023-11": "Novembro", "2023-12": "Dezembro"
-}
-
-meses_pagamento = list(meses_display.keys())
-
-# Função para exibir a lista de alunos com pagamento no mês selecionado
-def lista_de_alunos_com_pagamento(mes_key):
-    alunos_lista = df[["ID Aluno", "Nome", "Idade", "Plano", mes_key]]
-    alunos_lista = alunos_lista.rename(columns={mes_key: "Pagamento no mês"})
-    alunos_lista = alunos_lista.sort_values(by="Nome")
-    return alunos_lista
-
-# Função para mostrar o histórico de pagamentos de um aluno
-def exibir_historico_pagamentos(aluno_id):
-    aluno = df[df["ID Aluno"] == aluno_id].iloc[0]
-    historico_pagamentos = aluno[meses_pagamento]
-
-    fig = go.Figure(data=[go.Bar(x=[meses_display[m] for m in historico_pagamentos.index], y=historico_pagamentos.values)])
-    fig.update_layout(title="Histórico de Pagamentos")
-    st.plotly_chart(fig)
-
-    return aluno
-
-# Função para criar os gráficos da visão geral
 def visao_geral():
     st.subheader("Distribuição dos Alunos")
-    col1, col2 = st.columns(2)
-    with col1:
-        fig_idade = px.histogram(df, x="Idade", title="Por Idade")
-        st.plotly_chart(fig_idade)
-        fig_genero = px.pie(df, names="Gênero", title="Por Gênero")
-        st.plotly_chart(fig_genero)
-    with col2:
-        fig_plano = px.pie(df, names="Plano", title="Por Plano")
-        st.plotly_chart(fig_plano)
-        fig_meio_pagamento = px.pie(df, names="Meio de Pagamento", title="Por Meio de Pagamento")
-        st.plotly_chart(fig_meio_pagamento)
+    c1, c2 = st.columns(2)
+    with c1:
+        st.plotly_chart(px.histogram(df, x="Idade", title="Distribuição por Idade"))
+        st.plotly_chart(px.pie(df, names="Gênero", title="Distribuição por Gênero"))
+    with c2:
+        st.plotly_chart(px.pie(df, names="Plano", title="Distribuição por Plano"))
+        st.plotly_chart(px.pie(df, names="Meio de Pagamento", title="Distribuição por Meio de Pagamento"))
 
     st.subheader("Estatísticas por Mês")
-    mes_escolhido_key = st.selectbox("Selecione o mês", meses_pagamento, format_func=lambda x: meses_display[x])
+    mes = st.selectbox("Selecione o mês", meses_pagamento, format_func=lambda x: meses_display[x])
+    total_mat = df[df["Data de Matrícula"].dt.strftime("%Y-%m") == mes].shape[0]
+    total_ativos = df[df[mes] > 0].shape[0]
+    st.markdown(f"📚 Matrículas em **{meses_display[mes]}**: **{total_mat}**")
+    st.markdown(f"✅ Alunos ativos com pagamento no mês: **{total_ativos}**")
 
-    total_matriculas = df[df["Data de Matrícula"].str[:7] == mes_escolhido_key].shape[0]
-    total_cancelamentos = df[(df["Status de Cancelamento"] == 1) &
-                                (df["Data de Cancelamento"].str[:7] == mes_escolhido_key)].shape[0]
-    total_ativos = df[df[mes_escolhido_key] > 0].shape[0]
 
-    st.write(f"📊 Quantidade de matrículas em **{meses_display[mes_escolhido_key]}**: **{total_matriculas}**")
-    st.write(f"❌ Quantidade de cancelamentos em **{meses_display[mes_escolhido_key]}**: **{total_cancelamentos}**")
-    st.write(f"✅ Quantidade de alunos ativos (pagaram em **{meses_display[mes_escolhido_key]}**): **{total_ativos}**")
+def alunos_alto_risco():
+    st.subheader("🚨 Alunos com Risco de Cancelamento (Todos os Níveis)")
 
-# Função para gráficos de cancelamentos
-def grafico_cancelamentos():
-    df_cancelamentos = df[df["Status de Cancelamento"] == 1]
-    cancelamentos_por_estacao = df_cancelamentos.groupby("Estação do Cancelamento").size().reset_index(name="Quantidade")
+    filtro_plano = st.selectbox("📦 Filtrar por plano", ["Todos"] + sorted(df["Plano"].unique()))
+    filtro_risco = st.selectbox("🚦 Filtrar por risco", ["Todos", "Crítico (≥80%)", "Alerta (60–79.9%)", "Atenção (40–59.9%)", "Baixo (<40%)"])
 
-    fig = px.bar(cancelamentos_por_estacao, x="Estação do Cancelamento", y="Quantidade", title="Cancelamentos por Estação")
-    st.plotly_chart(fig)
+    risco_df = df[df["Status de Cancelamento"] == 0].copy()
 
-# Layout do Streamlit
-def main():
-    st.title("Dashboard da Academia")
+    # Adiciona a coluna de cor da bolinha
+    def classifica_risco(prob):
+        if prob >= 0.80:
+            return "🔴 Crítico"
+        elif prob >= 0.60:
+            return "🟠 Alerta"
+        elif prob >= 0.40:
+            return "🟡 Atenção"
+        else:
+            return "🟢 Baixo"
 
-    menu = ["Home", "Alunos", "Visão Geral", "Cancelamentos"]
-    escolha = st.sidebar.selectbox("Escolha uma opção", menu)
+    risco_df["Classificação de Risco"] = risco_df["Probabilidade de Cancelamento"].apply(classifica_risco)
 
-    if escolha == "Home":
-        st.header("Bem-vindo ao Dashboard da Academia!")
+    # Aplica filtros
+    if filtro_plano != "Todos":
+        risco_df = risco_df[risco_df["Plano"] == filtro_plano]
 
-    elif escolha == "Alunos":
-        st.header("Lista de Alunos")
-        mes_aluno_key = st.selectbox("Selecione o mês para visualizar pagamentos", meses_pagamento, format_func=lambda x: meses_display[x])
-        alunos = lista_de_alunos_com_pagamento(mes_aluno_key)
-        st.dataframe(alunos)
+    if filtro_risco != "Todos":
+        risco_df = risco_df[risco_df["Classificação de Risco"].str.contains(filtro_risco.split()[0])]
 
-        aluno_id = st.selectbox("Selecione um aluno para detalhes", alunos["ID Aluno"])
+    if risco_df.empty:
+        st.info("Nenhum aluno encontrado com os critérios selecionados.")
+    else:
+        st.dataframe(
+            risco_df[[
+                "Nome", "Idade", "Gênero", "Plano", "Tempo de Permanência (meses)",
+                "Total de Pagamentos", "Probabilidade (%)", "Classificação de Risco"
+            ]].sort_values("Probabilidade (%)", ascending=False),
+            use_container_width=True,
+            hide_index=True
+        )
 
-        if aluno_id:
-            aluno = exibir_historico_pagamentos(aluno_id)
-            st.subheader(f"Detalhes do Aluno: {aluno['Nome']}")
-            st.write(f"**Idade:** {aluno['Idade']}")
-            st.write(f"**Gênero:** {aluno['Gênero']}")
-            st.write(f"**Plano:** {aluno['Plano']}")
-            st.write(f"**Data de Matrícula:** {pd.to_datetime(aluno['Data de Matrícula']).strftime('%d/%m/%Y')}")
-            st.write(f"**Meio de Pagamento:** {aluno['Meio de Pagamento']}")
-            st.write(f"**Status de Cancelamento:** {'Cancelado' if aluno['Status de Cancelamento'] == 1 else 'Ativo'}")
-            st.write(f"**Tempo de Permanência:** {aluno['Tempo de Permanência (meses)']} meses")
-            if aluno['Status de Cancelamento'] == 1 and aluno['Data de Cancelamento']:
-                st.write(f"**Data de Cancelamento:** {pd.to_datetime(aluno['Data de Cancelamento']).strftime('%d/%m/%Y')}")
-                st.write(f"**Motivo do Cancelamento:** {aluno['Motivo do Cancelamento']}")
 
-    elif escolha == "Visão Geral":
-        st.header("Visão Geral da Academia")
-        visao_geral()
 
-    elif escolha == "Cancelamentos":
-        st.header("Cancelamentos na Academia")
-        grafico_cancelamentos()
+def lista_alunos():
+    st.subheader("👥 Lista de Alunos")
+    df["Status"] = df["Status de Cancelamento"].map({0: "Ativo", 1: "Cancelado"})
 
-# Executar o aplicativo
-if __name__ == "__main__":
-    main()
+    # --- Filtros
+    filtro_nome = st.text_input("🔍 Buscar por nome:")
+    filtro_plano = st.selectbox("📦 Filtrar por plano", ["Todos"] + sorted(df["Plano"].unique()))
+    filtro_status = st.selectbox("📌 Filtrar por status", ["Todos", "Ativo", "Cancelado"])
+    filtro_risco = st.selectbox("🚦 Filtrar por risco", ["Todos", "Crítico (≥80%)", "Alerta (60–79.9%)", "Atenção (40–59.9%)", "Sem risco (<40%)"])
+
+    # --- Aplicar filtros
+    res = df.copy()
+    if filtro_nome:
+        res = res[res["Nome"].str.contains(filtro_nome, case=False)]
+    if filtro_plano != "Todos":
+        res = res[res["Plano"] == filtro_plano]
+    if filtro_status != "Todos":
+        res = res[res["Status"] == filtro_status]
+    if filtro_risco != "Todos":
+        if "Crítico" in filtro_risco:
+            res = res[res["Probabilidade de Cancelamento"] >= 0.80]
+        elif "Alerta" in filtro_risco:
+            res = res[(res["Probabilidade de Cancelamento"] >= 0.60) & (res["Probabilidade de Cancelamento"] < 0.80)]
+        elif "Atenção" in filtro_risco:
+            res = res[(res["Probabilidade de Cancelamento"] >= 0.40) & (res["Probabilidade de Cancelamento"] < 0.60)]
+        elif "Sem risco" in filtro_risco:
+            res = res[res["Probabilidade de Cancelamento"] < 0.40]
+
+    # --- Cards
+    if filtro_nome:
+        if not res.empty:
+            for _, aluno in res.iterrows():
+                risco = aluno['Probabilidade de Cancelamento']
+                # Cor por faixa de risco
+                if risco >= 0.80:
+                    cor_risco = "#d9534f"
+                    bolinha = "🔴"
+                elif risco >= 0.60:
+                    cor_risco = "#f0ad4e"
+                    bolinha = "🟠"
+                elif risco >= 0.40:
+                    cor_risco = "#ffc107"
+                    bolinha = "🟡"
+                else:
+                    cor_risco = "#5cb85c"
+                    bolinha = "🟢"
+
+                emoji_status = "✅" if aluno["Status"] == "Ativo" else "❌"
+                st.markdown(f"""
+                <div style="background-color:#f5f5f5; padding:20px; border-radius:15px; 
+                            margin: 0 auto 20px auto; max-width: 500px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); 
+                            font-size:15px; color:#222;">
+                    <h4 style="margin-bottom:12px;"> {aluno['Nome']}</h4>
+                    <p><strong>🆔 ID:</strong> {aluno['ID Aluno']} | 🎂 <strong>Idade:</strong> {aluno['Idade']} anos | 🧬 <strong>Gênero:</strong> {aluno['Gênero']}</p>
+                    <p>📞 <strong>Telefone:</strong> {aluno['Telefone']}</p>
+                    <p>📦 <strong>Plano:</strong> {aluno['Plano']} | 💳 <strong>Pagamento:</strong> {aluno['Meio de Pagamento']}</p>
+                    <p>📊 <strong>Tempo de Permanência:</strong> {aluno['Tempo de Permanência (meses)']} meses | 💰 <strong>Total de Pagamentos:</strong> {aluno['Total de Pagamentos']}</p>
+                    <p>📈 <strong>Probabilidade de Cancelamento:</strong> {bolinha} 
+                        <span style="color:{cor_risco}; font-weight:bold;">{(risco * 100):.2f}%</span></p>
+                    <p>📌 <strong>Status:</strong> {emoji_status} {aluno['Status']}</p>
+                </div>
+                """, unsafe_allow_html=True)
+
+
+
+        else:
+            st.warning("Nenhum aluno encontrado com esse nome.")
+    else:
+        st.markdown("""
+            <style>
+                [data-testid="stDataFrame"] {
+                    width: 100% !important;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+
+        st.dataframe(
+            res[[
+                "ID Aluno", "Nome", "Idade", "Gênero", "Telefone", "Plano", "Meio de Pagamento",
+                "Tempo de Permanência (meses)", "Total de Pagamentos", "Probabilidade (%)", "Status"
+            ]],
+            use_container_width=True,
+            height=400
+        )
+
+
+# --- 4) Layout principal
+st.title("🏋️ Força Local – Dashboard de Gestão")
+menu = ["🏠 Home", "📊 Visão Geral",  "🚨 Alto Risco", "👥 Lista de Alunos"]
+op = st.sidebar.selectbox("Navegar", menu)
+
+if op == "🏠 Home":
+    st.write("Bem-vindo(a)! Use o menu à esquerda para explorar o dashboard.")
+elif op == "📊 Visão Geral":
+    visao_geral()
+elif op == "🚨 Alto Risco":
+    alunos_alto_risco()
+else:
+    lista_alunos()

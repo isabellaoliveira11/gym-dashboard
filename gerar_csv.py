@@ -3,17 +3,17 @@ import numpy as np
 from datetime import datetime, timedelta
 import random
 
-# Configurações
+# --- Configurações ---
 random.seed(42)
 total_alunos = 500
 alunos_iniciais = 200
 alunos_novos = total_alunos - alunos_iniciais
-cancelamentos = 200
+cancelamentos_maximo = 180
 
-# Datas e estações
+# Datas e Estações
 meses = pd.date_range(start="2023-01-01", end="2023-12-01", freq="MS")
+meses_numeros = list(range(1, 13))
 
-# Estações para sazonalidade
 estacoes = {
     "Verão": [1, 2, 12],
     "Outono": [3, 4, 5],
@@ -28,23 +28,19 @@ proporcao_estacoes = {
     "Primavera": 0.25
 }
 
-# Motivos de cancelamento
-motivos_cancelamento = ["Mudança de Endereço", "Problemas Financeiros", "Outros"]
-proporcao_motivos = {"Mudança de Endereço": 0.2, "Problemas Financeiros": 0.5, "Outros": 0.3}
+motivos_cancelamento = ["Problemas Financeiros", "Outros"]
+proporcao_motivos = {"Problemas Financeiros": 0.7, "Outros": 0.3}
 
-# Funções auxiliares
-
+# --- Funções auxiliares ---
 def gerar_data_estacao(estacao):
     meses_estacao = estacoes[estacao]
     mes_escolhido = random.choice(meses_estacao)
-    ano = 2023
-    dia = random.randint(1, 28)
-    return datetime(ano, mes_escolhido, dia)
+    return datetime(2023, mes_escolhido, random.randint(1, 28))
 
 def estacao_do_ano(data):
     mes = data.month
-    for estacao, meses in estacoes.items():
-        if mes in meses:
+    for estacao, meses_lista in estacoes.items():
+        if mes in meses_lista:
             return estacao
 
 def calcular_tempo_permanencia(inicio, fim):
@@ -53,35 +49,34 @@ def calcular_tempo_permanencia(inicio, fim):
 def gerar_data_aleatoria(data_inicio, data_fim):
     dias_diferenca = (data_fim - data_inicio).days
     if dias_diferenca > 0:
-        dias_aleatorios = random.randint(0, dias_diferenca)
-        return data_inicio + timedelta(days=dias_aleatorios)
-    elif dias_diferenca == 0:
-        return data_inicio
-    else:
-        return data_inicio
+        return data_inicio + timedelta(days=random.randint(1, dias_diferenca))
+    return data_inicio
 
 def escolher_motivo_cancelamento():
     motivos = list(proporcao_motivos.keys())
     pesos = list(proporcao_motivos.values())
     return random.choices(motivos, weights=pesos, k=1)[0]
 
-# Dados base
+def escolher_meio_pagamento(plano):
+    if plano == "Anual":
+        return random.choices(["Cartão", "Dinheiro", "Pix"], weights=[0.6, 0.2, 0.2])[0]
+    return random.choice(["Pix", "Dinheiro", "Cartão"])
+
+# --- Gerar Dados ---
 nomes = [f"Aluno {i}" for i in range(1, total_alunos + 1)]
 generos = ["Masculino", "Feminino"]
-planos = ["Mensal", "Trimestral", "Anual"]
-meios_pagamento = ["Cartão", "Dinheiro", "Pix"]
+planos = ["Mensal",  "Anual"]
 
-# Lista principal de dados
 dados = []
 
-# ------------------- Alunos Iniciais -------------------
+# Alunos Iniciais (Janeiro)
 for i in range(alunos_iniciais):
     nome = nomes[i]
-    idade = random.randint(18, 60)
-    genero = random.choice(generos)
+    genero = random.choices(["Feminino", "Masculino"], weights=[0.7, 0.3])[0]
+    idade = random.choices(range(18, 61), weights=[2 if 25 <= a <= 45 else 1 for a in range(18, 61)])[0] if genero == "Feminino" else random.randint(18, 60)
     plano = random.choice(planos)
-    meio_pagamento = random.choice(meios_pagamento)
-    data_matricula = datetime(2023, 1, 8)
+    meio_pagamento = escolher_meio_pagamento(plano)
+    data_matricula = datetime(2023, 1, random.randint(1, 28))
 
     linha = {
         "ID Aluno": i + 1,
@@ -99,22 +94,21 @@ for i in range(alunos_iniciais):
         "Motivo do Cancelamento": "",
         "Tempo de Permanência (meses)": calcular_tempo_permanencia(data_matricula, datetime(2023, 12, 31))
     }
-
     for mes in meses:
         linha[mes.strftime("%Y-%m")] = 1 if mes >= data_matricula else 0
 
     dados.append(linha)
 
-# ------------------- Novos Alunos -------------------
+# Novos Alunos durante o ano
 idx = alunos_iniciais
 for estacao, proporcao in proporcao_estacoes.items():
     qtd = int(proporcao * alunos_novos)
     for _ in range(qtd):
         nome = nomes[idx]
-        idade = random.randint(18, 60)
-        genero = random.choice(generos)
+        genero = random.choices(["Feminino", "Masculino"], weights=[0.7, 0.3])[0]
+        idade = random.choices(range(18, 61), weights=[2 if 25 <= a <= 45 else 1 for a in range(18, 61)])[0] if genero == "Feminino" else random.randint(18, 60)
         plano = random.choice(planos)
-        meio_pagamento = random.choice(meios_pagamento)
+        meio_pagamento = escolher_meio_pagamento(plano)
         data_matricula = gerar_data_estacao(estacao)
 
         linha = {
@@ -133,86 +127,59 @@ for estacao, proporcao in proporcao_estacoes.items():
             "Motivo do Cancelamento": "",
             "Tempo de Permanência (meses)": calcular_tempo_permanencia(data_matricula, datetime(2023, 12, 31))
         }
-
         for mes in meses:
             linha[mes.strftime("%Y-%m")] = 1 if mes >= data_matricula else 0
 
         dados.append(linha)
         idx += 1
 
-# ------------------- Cancelamentos -------------------
-cancelar_indices = random.sample(range(total_alunos), cancelamentos)
+# --- Inadimplência (simulação de alguns alunos com atraso de pagamento) ---
+alunos_mensais = [a for a in dados if a["Plano"] == "Mensal"]
+alunos_inadimplentes = random.sample(alunos_mensais, int(0.10 * len(alunos_mensais)))
 
-for idx in cancelar_indices:
-    aluno = dados[idx]
-    data_matricula = datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d")
-    data_cancelamento = None
+for aluno in alunos_inadimplentes:
+    mes_inicio = random.randint(1, 10)
+    duracao = random.choice([1, 2])
+    for i in range(duracao):
+        if mes_inicio + i <= 12:
+            aluno[meses[mes_inicio + i - 1].strftime("%Y-%m")] = 0
 
-    mes_matricula = data_matricula.month
+# --- Cancelamentos programados (picos no inverno + outros meses) ---
+cancelamentos_alvo = {
+    2: 5, 3: 6, 4: 8, 5: 5,
+    6: 25, 7: 22, 8: 21,
+    9: 12, 10: 16, 11: 18, 12: 23
+}
 
-    # Probabilidade maior de cancelar se matriculado antes dos picos
-    probabilidade_pico = 0.7 if mes_matricula < 6 or (mes_matricula > 8 and mes_matricula < 10) else 0.3
-    if random.random() < probabilidade_pico:
-        # Cancelamento no pico de junho-agosto
-        if mes_matricula < 6:
-            data_cancelamento = gerar_data_aleatoria(datetime(2023, 6, 1), datetime(2023, 8, 31))
-        # Cancelamento no pico de outubro-dezembro
-        elif mes_matricula > 8 and mes_matricula < 10:
-            data_cancelamento = gerar_data_aleatoria(datetime(2023, 10, 1), datetime(2023, 12, 31))
-        # Cancelamento em outros meses com menor probabilidade, mas ainda possível
-        else:
-            data_cancelamento_inicio = data_matricula + timedelta(days=30) # Cancela pelo menos um mês depois
-            data_cancelamento_fim = datetime(2023, 12, 31)
-            if data_cancelamento_inicio <= data_cancelamento_fim:
-                data_cancelamento = gerar_data_aleatoria(data_cancelamento_inicio, data_cancelamento_fim)
-    else:
-        # Cancelamentos com menor probabilidade nos outros meses
-        data_cancelamento_inicio = data_matricula + timedelta(days=30) # Cancela pelo menos um mês depois
-        data_cancelamento_fim = datetime(2023, 12, 31)
-        if data_cancelamento_inicio <= data_cancelamento_fim:
-            data_cancelamento = gerar_data_aleatoria(data_cancelamento_inicio, data_cancelamento_fim)
+cancelamentos_por_mes = {mes: 0 for mes in meses_numeros}
+total_cancelados = 0
+random.shuffle(dados)
 
-    if data_cancelamento and data_cancelamento > data_matricula:
-        aluno["Status de Cancelamento"] = 1
-        aluno["Data de Cancelamento"] = data_cancelamento.strftime("%Y-%m-%d")
-        aluno["Mês do Cancelamento"] = data_cancelamento.month
-        aluno["Estação do Cancelamento"] = estacao_do_ano(data_cancelamento)
-        aluno["Tempo de Permanência (meses)"] = calcular_tempo_permanencia(data_matricula, data_cancelamento)
-        aluno["Motivo do Cancelamento"] = escolher_motivo_cancelamento()
-
-        for mes in meses:
-            if mes > data_cancelamento:
-                aluno[mes.strftime("%Y-%m")] = 0
-
-# Remover alunos que não foram cancelados (para manter o número exato de cancelamentos)
-dados_cancelados = [aluno for aluno in dados if aluno["Status de Cancelamento"] == 1]
-dados_nao_cancelados = [aluno for aluno in dados if aluno["Status de Cancelamento"] == 0]
-
-if len(dados_cancelados) > cancelamentos:
-    dados_cancelados = random.sample(dados_cancelados, cancelamentos)
-elif len(dados_cancelados) < cancelamentos:
-    # Se por acaso houver menos cancelamentos do que o desejado, podemos ajustar (opcional)
-    num_faltantes = cancelamentos - len(dados_cancelados)
-    alunos_para_forcar_cancelamento = random.sample(dados_nao_cancelados, min(num_faltantes, len(dados_nao_cancelados)))
-    for aluno in alunos_para_forcar_cancelamento:
-        data_matricula = datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d")
-        # Força o cancelamento em um dos picos ou em outro mês
-        if random.random() < 0.5:
-            data_cancelamento = gerar_data_aleatoria(datetime(2023, 6, 1), datetime(2023, 8, 31))
-        else:
-            data_cancelamento = gerar_data_aleatoria(datetime(2023, 10, 1), datetime(2023, 12, 31))
-
-        if data_cancelamento > data_matricula:
+for mes, alvo in cancelamentos_alvo.items():
+    candidatos = [aluno for aluno in dados if aluno["Status de Cancelamento"] == 0 and datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d").month <= mes]
+    random.shuffle(candidatos)
+    for aluno in candidatos[:alvo]:
+        data_cancelamento = gerar_data_aleatoria(datetime(2023, mes, 1), datetime(2023, mes, 28))
+        if datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d") < data_cancelamento:
             aluno["Status de Cancelamento"] = 1
             aluno["Data de Cancelamento"] = data_cancelamento.strftime("%Y-%m-%d")
             aluno["Mês do Cancelamento"] = data_cancelamento.month
             aluno["Estação do Cancelamento"] = estacao_do_ano(data_cancelamento)
-            aluno["Tempo de Permanência (meses)"] = calcular_tempo_permanencia(data_matricula, data_cancelamento)
             aluno["Motivo do Cancelamento"] = escolher_motivo_cancelamento()
-            dados_cancelados.append(aluno)
+            aluno["Tempo de Permanência (meses)"] = calcular_tempo_permanencia(datetime.strptime(aluno["Data de Matrícula"], "%Y-%m-%d"), data_cancelamento)
+            for mes_ in meses:
+                if mes_ > data_cancelamento:
+                    aluno[mes_.strftime("%Y-%m")] = 0
+            cancelamentos_por_mes[mes] += 1
+            total_cancelados += 1
+            if total_cancelados >= cancelamentos_maximo:
+                break
+    if total_cancelados >= cancelamentos_maximo:
+        break
 
-dados_final = dados_cancelados + dados_nao_cancelados
-df_final = pd.DataFrame(dados_final)
-df_final.to_csv("academia_dados_e_pagamentos_simulado_picos_cancelamento.csv", index=False, encoding='utf-8-sig')
+# --- Salvar o CSV Final ---
+df_final = pd.DataFrame(dados)
+df_final.to_csv("academia_dados_previsao_cancelamento.csv", index=False, encoding='utf-8-sig')
 
-print("✅ Arquivo gerado com sucesso com picos de cancelamento!")
+print(f"✅ Arquivo gerado com sucesso com {total_cancelados} cancelamentos (máximo {cancelamentos_maximo})!")
+print("Cancelamentos por mês:", cancelamentos_por_mes)
