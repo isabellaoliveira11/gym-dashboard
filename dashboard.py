@@ -39,7 +39,7 @@ def visao_geral():
 
 
 def alunos_alto_risco():
-    st.subheader("🚨 Alunos com Risco de Cancelamento (Todos os Níveis)")
+    st.subheader("🚨 Alunos com Risco de Cancelamento")
 
     filtro_plano = st.selectbox("📦 Filtrar por plano", ["Todos"] + sorted(df["Plano"].unique()))
     filtro_risco = st.selectbox("🚦 Filtrar por risco", ["Todos", "Crítico (≥80%)", "Alerta (60–79.9%)", "Atenção (40–59.9%)", "Baixo (<40%)"])
